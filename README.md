@@ -135,7 +135,7 @@ The benchmark finds the **breakdown point**: the entity count at which frame tim
 Results include:
 - **Breakdown Point**: Maximum sustainable entity count
 - **Peak Throughput**: Entities processed per second at breakdown
-- **Frame Time Distribution**: Min/max/median frame times
+- **Frame Time Distribution**: Frame times animated on a graph
 
 ## Output Example
 
