@@ -1,0 +1,31 @@
+[package]
+name = "bevy_ecs_benchmark"
+version = "0.1.0"
+edition = "2021"
+description = "A comprehensive ECS stress test and benchmarking suite for Bevy"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/your-username/bevy_ecs_benchmark"
+keywords = ["bevy", "ecs", "benchmark", "performance", "gamedev"]
+categories = ["game-development", "development-tools::profiling"]
+
+[dependencies]
+bevy = { version = "0.17.3", features = ["wayland"] }
+rand = "0.8"
+# Fast, seedable PRNG - significantly faster than thread_rng() for bulk entity generation
+rand_xoshiro = "0.6"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+chrono = "0.4"
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 1
+
+[profile.release-with-debug]
+inherits = "release"
+debug = true
+
+# Optimize dependencies even in debug mode for reasonable performance
+[profile.dev.package."*"]
+opt-level = 2
