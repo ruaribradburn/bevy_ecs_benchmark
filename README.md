@@ -1,6 +1,6 @@
 # Bevy ECS Benchmark Suite
 
-A comprehensive stress testing and benchmarking suite for Bevy's Entity Component System. Designed to measure ECS throughput independently of rendering overhead.
+A lightweight stress testing and benchmarking suite for Bevy's Entity Component System. Designed to measure ECS throughput independently of rendering overhead.
 
 ## Features
 
